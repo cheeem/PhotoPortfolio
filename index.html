@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jackson Werner Photos </title>
+</head>
+<body>
+    <aside> 
+        <header> 
+            <h1> Jackson Werner </h1>
+            <h2> noise above all </h2>
+        </header>
+
+        <ul class="categories">
+            <a href="#shows"> <p>></p> <h3>Shows</h3> </a>
+            <a href="#midwest"> <p>></p> <h3>Midwest</h3> </a>
+            <!-- <a href="#"> <p>></p> <h3>Portrait</h3> </a> -->
+        </ul>
+
+        <ul class="socials">
+            <a href="https://www.instagram.com/ever.rot/"> <img src="./icon/Instagram.svg" alt="Instagram" /> <h3>@ever.rot</h3> </a>
+            <a href="mailto:jacksontwerner@gmail.com"> <img class="email-img" src="./icon/Envelope.svg" alt="Email" /> <h3>jacksontwerner@gmail.com</h3> </a>
+        </ul>
+
+    </aside>
+    <main> 
+
+        <ul id="shows">
+            
+            <li>
+                <img src="./shows/DSC_1328.JPG" alt="" />
+            </li>
+            <li>
+                <img src="./shows/DSC_1373.JPG" alt="" />
+            </li>
+            <li>
+                <img src="./shows/DSC_0203.JPG" alt="" />
+            </li>
+            
+            <li>
+                <img src="./shows/DSC_1446.JPG" alt="" />
+            </li>
+            <li>
+                <img src="./shows/DSC_1579.JPG" alt="" />
+            </li>
+            <li>
+                <img src="./shows/DSC_1516.JPG" alt="" />
+            </li>
+
+            <li>
+                <img src="./shows/DSC_0184.JPG" alt="" />
+            </li>
+            <li>
+                <img src="./shows/DSC_0433.JPG" alt="" />
+            </li>
+            <li>
+                <img src="./shows/DSC_0300.JPG" alt="" />
+            </li>
+
+            <li>
+                <img src="./shows/DSC_0274.JPG" alt="" />
+            </li>
+            <li>
+                <img src="./shows/DSC_0126.JPG" alt="" />
+            </li>
+            <li>
+                <img src="./shows/DSC_0161.JPG" alt="" />
+            </li>
+
+            <li>
+                <img src="./shows/DSC_1400.JPG" alt="" />
+            </li>
+            <li>
+                <img src="./shows/DSC_2732.JPG" alt="" />
+            </li>
+            <li>
+                <img src="./shows/DSC_2770.JPG" alt="" />
+            </li>
+
+        </ul>
+
+        <ul id="midwest">
+            
+            <li>
+                <img src="./midwest/DSC_2418.JPG" alt="" />
+            </li>
+            <li>
+                <img src="./midwest/DSC_2384.JPG" alt="" />
+            </li>
+            <li>
+                <img src="./midwest/DSC_2431.JPG" alt="" />
+            </li>
+
+            <li>
+                <img src="./midwest/DSC_0251.JPG" alt="" />
+            </li>
+            <li>
+                <img src="./midwest/DSC_2698.JPG" alt="" />
+            </li>
+            <li>
+                <img src="./midwest/DSC_0224.JPG" alt="" />
+            </li>
+
+            <li>
+                <img src="./midwest/DSC_0218.JPG" alt="" />
+            </li>
+            <li>
+                <img src="./midwest/DSC_0274.JPG" alt="" />
+            </li>
+            <li>
+                <img src="./midwest/DSC_0322.JPG" alt="" />
+            </li>
+
+        </ul>
+
+    </main>
+</body>
+</html>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+        text-decoration: none;
+        /* font-family: 'Montserrat', sans-serif; */
+        font-family: monospace;
+        /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+        color: var(--dark1);
+    }
+
+    :root {
+        --light1: white;
+        --light2: hsl(0, 0%, 97%);
+
+        --dark1: hsl(252, 10%, 20%);
+        --dark2: hsl(252, 10%, 25%);
+
+        --highlight1: red;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        display: flex;
+        gap: 3em;
+
+        padding: 3em 3em 5em 3em;
+    }
+
+    aside {
+        position: sticky; 
+        top: 3em;
+
+        align-self: flex-start;
+        flex-shrink: 0;
+
+        display: grid;
+        gap: 3em;
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 1em;
+    }
+
+    aside ul {
+        display: grid;
+        gap: 0.5em;
+
+        font-size: 1.1em;
+    }
+
+    aside a {
+        z-index: 2;
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+
+        font-weight: 600;
+        /* font-size: 0.9em; */
+    }
+
+    aside h3 {
+        font-size: 0.8em;
+        transition: translate 0.2s ease;
+    }
+
+    aside a:hover h3 {
+        translate: 0.25em 0;
+    }
+
+    .categories a {
+        gap: 1em;
+    }
+
+    .socials img {
+        height: 1em;
+        width: 1em;
+    }
+
+    main {
+        display: grid;
+        gap: 5em;
+    }
+
+    main ul {
+        position: relative;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 1fr;
+        column-gap: 0.5em;
+
+        /* translate: 0 -0.5em; */
+    }
+
+    main li {
+        position: sticky;
+        top: 3em;
+
+        border-top: 0.5em solid var(--light1);
+    }
+
+    main li img {
+        width: 100%;
+        height: 100%;
+
+        /* aspect-ratio: 3 / 2; */
+    }
+
+</style>
