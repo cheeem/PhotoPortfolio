@@ -19,7 +19,7 @@
         </ul>
 
         <ul class="socials">
-            <a href="https://www.instagram.com/ever.rot/"> <img src="./icon/Instagram.svg" alt="Instagram" /> <h3>@ever.rot</h3> </a>
+            <a href="https://www.instagram.com/ever.rot/" target="_blank" rel="noopener noreferrer"> <img src="./icon/Instagram.svg" alt="Instagram" /> <h3>@ever.rot</h3> </a>
             <a href="mailto:jacksontwerner@gmail.com"> <img class="email-img" src="./icon/Envelope.svg" alt="Email" /> <h3>jacksontwerner@gmail.com</h3> </a>
         </ul>
 
@@ -155,14 +155,18 @@
     }
 
     aside {
+        z-index: 5;
         position: sticky; 
         top: 3em;
 
         align-self: flex-start;
         flex-shrink: 0;
 
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: 3em;
+
+        background-color: var(--light1);
     }
 
     h2 {
@@ -171,7 +175,8 @@
     }
 
     aside ul {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: 0.5em;
 
         font-size: 1.1em;
@@ -187,6 +192,10 @@
 
         font-weight: 600;
         /* font-size: 0.9em; */
+    }
+
+    aside p {
+        translate: 0 -0.125em;
     }
 
     aside h3 {
@@ -208,15 +217,15 @@
     }
 
     main {
+        position: relative;
+
         display: grid;
         gap: 7.5em;
     }
 
     main ul {
-        position: relative;
-
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: 1fr;
         column-gap: 0.5em;
 
@@ -235,6 +244,70 @@
         height: 100%;
 
         /* aspect-ratio: 3 / 2; */
+    }
+
+    @media screen and (max-aspect-ratio: 7/5) {
+        
+        body {
+            flex-direction: column;
+
+            padding-top: 0;
+        }
+
+        aside {
+            top: 0;
+
+            flex-direction: row;
+            gap: 5em;
+
+            height: 8.5em;
+            width: 100%;
+
+            padding-top: 3em;
+        }
+
+        main li {
+            top: 8.5em;
+        }
+
+    }
+
+    @media screen and (max-aspect-ratio: 8/10) {
+
+        body {
+            font-size: 0.8em;
+        }
+
+        aside {
+            justify-content: space-between;
+        }
+
+        .categories {
+            display: none;
+        }
+
+        .socials {
+            align-self: flex-start;
+
+            translate: 0 0.25em;
+        }
+
+        .socials a {
+            justify-content: flex-end;
+        }
+
+        .socials a img {
+            order: 1;
+        }
+
+        .socials a:hover h3 {
+            translate: -0.25em 0;
+        }
+
+        main ul {
+            grid-template-columns: 1fr;
+        }
+
     }
 
 </style>
